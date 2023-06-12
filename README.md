@@ -7,11 +7,6 @@ with:
   web3_token: ${{ secrets.WEB3_STORAGE_TOKEN }}
   path_to_add: 'dist'
 
-# "bafkreicysg23kiwv34eg2d7qweipxwosdo2py4ldv42nbauguluen5v6am"
-- run: echo ${{ steps.web3.outputs.cid }}
-
-# "https://dweb.link/ipfs/bafkreicysg23kiwv34eg2d7qweipxwosdo2py4ldv42nbauguluen5v6am"
-- run: echo ${{ steps.web3.outputs.url }}
 ```
 
 ## Inputs
@@ -29,11 +24,6 @@ with:
 
 ### `wrap_with_directory`
 
-_Default_ `false`
-
-Should the `path_to_add` be wrapped in a diretory when creating the IPFS DAG. For most folks using this action the default of `false` is fine. 
-
-This is the opposite of the default that web3.storage uses, as this action is commonly used to add a directory that contains a static website to IPFS. In that case you want the path_to_add to become the root cid so you can host your site at `https://<cid>.ipfs.dweb.link` rather than `https://<cid>.ipfs.dweb.link/<path_to_add>`.
 
 If you do want to capture the `path_to_add` path itself in the IPFS DAG then you want to set `wrap_with_directory:true`.
 
