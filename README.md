@@ -62,19 +62,3 @@ Useful for testing against staging deployments by setting to the api origin of y
 
 ### `cid`
 
-The IPFS content ID for the directory on IPFS. 
-e.g. `bafkreicysg23kiwv34eg2d7qweipxwosdo2py4ldv42nbauguluen5v6am`
-
-### `url`
-
-The IPFS gateway URL for the directory 
-e.g. `https://dweb.link/ipfs/bafkreicysg23kiwv34eg2d7qweipxwosdo2py4ldv42nbauguluen5v6am`
-
-
-## Contibuting
-
-💌 Considerate contributions welcome! 
-
-The `dist` folder is commited to the repo as is the curious cultural norm with JS actions, as the repo is the delivery mechanism, so to spare some cycles for the user users, all the deps are bundled into a single /dist/index.js monolith.
-
-<h3 align="center"><a href="https://web3.storage">⁂</a></h3>
