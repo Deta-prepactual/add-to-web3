@@ -45,7 +45,5 @@ Useful for testing against staging deployments by setting to the api origin of y
 
 </details>
 
-## Outputs
 
-### `cid`
 
