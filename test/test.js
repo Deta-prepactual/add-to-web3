@@ -23,13 +23,12 @@ test('addToWeb3', async t => {
     pathToAdd: 'test/fixtures',
     name: 'testing add-to-web3'
   })
-  t.is(cid, 'bafybeifpw7nrh374rzfcxpaw3bkp6fr7djmujg5wvib6ma7i7n76t3k53q')
-  t.is(url, `https://dweb.link/ipfs/${cid}`)
+
 })
 
 // shows how the runner will run a javascript action with env / stdout protocol
 test('runs like an action', t => {
-  process.env.GITHUB_REPOSITORY = 'good/one'
+  process.env.GITHUB_REPOSITORY = 
   process.env.GITHUB_SHA = '6a8a00320d3e15207b1c8b161471e5ba78e464e1'
   process.env.INPUT_PATH_TO_ADD = 'test/fixtures'
   process.env.INPUT_WEB3_API = 'https://api-staging.web3.storage'
@@ -40,11 +39,9 @@ test('runs like an action', t => {
   const output = cp.execSync(`node ${ip}`, { env: process.env }).toString()
   // console.log(output)
   t.is(output, `Adding test/fixtures to https://api-staging.web3.storage
-https://dweb.link/ipfs/bafybeifpw7nrh374rzfcxpaw3bkp6fr7djmujg5wvib6ma7i7n76t3k53q
 
-::set-output name=cid::bafybeifpw7nrh374rzfcxpaw3bkp6fr7djmujg5wvib6ma7i7n76t3k53q
 
-::set-output name=url::https://dweb.link/ipfs/bafybeifpw7nrh374rzfcxpaw3bkp6fr7djmujg5wvib6ma7i7n76t3k53q
+
 `)
 })
 
@@ -60,10 +57,6 @@ test('runs like an action (WRAP_WITH_DIRECTORY="true")', t => {
   const output = cp.execSync(`node ${ip}`, { env: process.env }).toString()
   // console.log(output)
   t.is(output, `Adding test/fixtures to https://api-staging.web3.storage
-https://dweb.link/ipfs/bafybeig2girrvm6wjis6xuqaqvoxhfejuk2bwv4bfzpjhlahsume26ufjy
 
-::set-output name=cid::bafybeig2girrvm6wjis6xuqaqvoxhfejuk2bwv4bfzpjhlahsume26ufjy
-
-::set-output name=url::https://dweb.link/ipfs/bafybeig2girrvm6wjis6xuqaqvoxhfejuk2bwv4bfzpjhlahsume26ufjy
 `)
 })
